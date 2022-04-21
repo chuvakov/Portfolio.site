@@ -1,6 +1,9 @@
 $(function () {
 	//инициализируем все всплывающие подсказки (BootStrap)
-	$('[data-bs-toggle="tooltip"]').tooltip();
+	$('[data-bs-toggle="tooltip"]').tooltip({
+		container: 'body',
+		trigger: 'hover',
+	});
 
 	//Событие при клике на элемент навигации
 	$('.header-nav__item').click(function () {
@@ -49,20 +52,45 @@ $(function () {
 		e.preventDefault();
 		let emailMessage = $('.contacts__form').serializeJSON();
 
+		if (emailMessage.email == '') {
+			swal({
+				title: 'Предупреждение!',
+				text: 'Поле "email" не заполнено!',
+				icon: 'warning',
+			});
+			return;
+		}
+
+		if (emailMessage.message == '') {
+			swal({
+				title: 'Предупреждение!',
+				text: 'Поле "Сообщение" не заполнено!',
+				icon: 'warning',
+			});
+			return;
+		}
+
 		toggleDisableSendMessage();
 
+		setTimeout(sendMessage, 1000, emailMessage);
+	});
+
+	function sendMessage(emailMessage) {
 		axios
 			.post('https://localhost:7239/api/email', emailMessage)
 			.then(function (response) {
+				$('.contacts__form').trigger('reset');
 				toastSuccess('Сообщение успешно отправлено!');
 			})
 			.catch(function (error) {
 				toastError('Что-то пошло не так!');
 			});
-	});
+		toggleDisableSendMessage();
+	}
 
 	function toggleDisableSendMessage() {
 		let $btn = $('#send-message');
+		$btn.toggleClass('disabled');
 		let attrDisable = $btn.attr('disabled');
 
 		if (attrDisable == 'disabled') {

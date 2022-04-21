@@ -15,6 +15,19 @@
 	max-width: 350px;
 }
 
+.btn-default.disabled .spinner-border {
+	display: block !important;
+}
+
+.btn-default.disabled .btn-content {
+	display: none !important;
+}
+
+.btn-default.disabled .load-text {
+	display: block !important;
+	margin-left: 15px;
+}
+
 .btn-default--big {
 	max-width: 450px;
 	padding-right: 50px;

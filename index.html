@@ -6,6 +6,8 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>Portfolio / Alexander Chuvakov</title>
 
+		<link rel="shortcut icon" href="/img/icon.png" type="image/x-icon" />
+
 		<link
 			href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
 			rel="stylesheet"
@@ -38,6 +40,7 @@
 		<!--ссылки js-->
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 		<script src="/js/libs/jquery.serializejson.min.js"></script>
+		<script src="/js/libs/sweat-allert.min.js"></script>
 		<script src="/js/index.js"></script>
 	</head>
 	<body>
@@ -134,14 +137,16 @@
 							<div class="carousel-item active">
 								<div class="carousel-item-header">
 									<a
+										target="_blank"
 										class="carousel-link"
+										style="z-index: 999"
 										data-bs-toggle="tooltip"
 										title="Ссылка на сайт"
 										href="https://www.nipponexpress.com/"
 									>
 										<img src="/img/public_white_24dp.svg" />
 									</a>
-									<div class="carousel-icon--right">
+									<div class="carousel-icon--right" style="z-index: 999">
 										<img
 											src="/img/work_outline_white_24dp.svg"
 											data-bs-toggle="tooltip"
@@ -434,7 +439,7 @@
 							<input class="contacts__input" type="text" placeholder="Имя" name="name" />
 						</div>
 						<div class="col p-0">
-							<input class="contacts__input" type="email" placeholder="Email" name="email" />
+							<input class="contacts__input" type="email" placeholder="Email*" name="email" />
 						</div>
 					</div>
 					<div class="row">
@@ -446,20 +451,20 @@
 						<div class="col">
 							<textarea
 								class="contacts__input contacts__input-message"
-								placeholder="Сообщение"
+								placeholder="Сообщение*"
 								name="message"
 							></textarea>
 						</div>
 					</div>
 					<div class="row mt-5">
 						<div class="col-6 col-sm-12">
-							<button id="send-message" class="btn-default btn-default--big">
+							<button id="send-message" class="btn-default btn-default--big" style="min-width: 414px">
 								<span
 									class="spinner-border d-none spinner-border-sm"
 									role="status"
 									aria-hidden="true"
 								></span>
-								<span class="visually-hidden">Loading...</span>
+								<span class="d-none load-text">Отправка...</span>
 								<span class="btn-content">
 									Отправить сообщение
 									<img class="arrow-animate" src="/img/Right Arrow.svg" alt="" />

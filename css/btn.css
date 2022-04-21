@@ -1,0 +1,66 @@
+.btn-default {
+	padding: 10px 25px;
+	border-radius: 12px;
+	border: 1px solid rgb(64, 204, 247);
+	background-color: transparent;
+	color: white;
+	font-size: 24px;
+	font-weight: 900;
+	display: flex;
+	align-items: center;
+	cursor: pointer;
+	transition: background-color linear 200ms;
+	justify-content: center;
+	text-decoration: none;
+	max-width: 350px;
+}
+
+.btn-default--big {
+	max-width: 450px;
+	padding-right: 50px;
+}
+
+.btn-default:hover {
+	background-color: rgb(64, 204, 247);
+	color: white;
+}
+
+.btn-default img {
+	margin-left: 13px;
+}
+
+.btn-default--contrast {
+	background-color: rgb(64, 204, 247);
+}
+
+.btn-default--contrast:hover {
+	background-color: transparent;
+}
+
+.btn-default--small {
+	font-size: 12px;
+	padding: 6px 15px;
+	width: 120px;
+	border-radius: 8px;
+}
+
+.arrow-animate {
+	animation-name: leftRightAnimate;
+	animation-duration: 2s;
+	animation-iteration-count: infinite;
+	margin-left: 30px !important;
+}
+
+@keyframes leftRightAnimate {
+	0% {
+		transform: translateX(0);
+	}
+
+	50% {
+		transform: translateX(20px);
+	}
+
+	100% {
+		transform: translateX(0px);
+	}
+}

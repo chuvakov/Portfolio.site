@@ -1,0 +1,30 @@
+.menu-toggle {
+	position: relative;
+}
+
+.menu-toggle span {
+	position: relative;
+	display: block;
+	width: 33px;
+	height: 4px;
+	background-color: white;
+	border-radius: 3px;
+	margin-bottom: 5px;
+	transform-origin: 4px 0px;
+	transition: all linear 200ms;
+}
+
+.menu-toggle.active span {
+	opacity: 1;
+	transform: rotate(45deg) translate(-2px, -1px);
+}
+
+.menu-toggle.active span:nth-child(2) {
+	opacity: 0;
+	transform: rotate(0) scale(0.2, 0.2);
+}
+
+.menu-toggle.active span:last-child {
+	transform: rotate(-45deg) translate(0px, -1px);
+	transform-origin: 0% 100%;
+}

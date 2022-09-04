@@ -31,7 +31,6 @@
 .projects__item {
 	padding: 15px;
 	border-radius: 12px;
-	max-width: 320px;
 	min-height: 180px;
 	background-color: rgba(143, 143, 143, 0.1);
 }

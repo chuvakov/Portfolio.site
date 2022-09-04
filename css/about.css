@@ -36,7 +36,7 @@
 	position: relative;
 }
 
-.about__slider .carousel-item {
+.about__slider .carousel-item.active {
 	width: 400px;
 	max-height: 180px;
 	display: flex;
@@ -113,7 +113,7 @@
 }
 
 .about__text {
-	font-size: 18px;
+	font-size: 16px;
 	margin-bottom: 50px;
 	max-height: 290px;
 	overflow-y: auto;

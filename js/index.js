@@ -1,4 +1,137 @@
+import { API_URL, skills, projects, works, contacts } from './config.js';
+
 $(function () {
+	// Отрисовка мест работ
+	const initWorks = () => {
+		let count = 0;
+		works.forEach((w) => {
+			$('.carousel-inner').append(`
+				<div class="carousel-item ${w.isActive == true ? 'active' : ''}">
+					<div class="carousel-item-header">
+						<a
+							target="_blank"
+							class="carousel-link"
+							style="z-index: 999"
+							data-bs-toggle="tooltip"
+							title="Ссылка на сайт"
+							href="${w.siteLink}"
+						>
+							<img src="/img/public_white_24dp.svg" />
+						</a>
+						<div class="carousel-icon--right" style="z-index: 999">
+							<img
+								src="/img/work_outline_white_24dp.svg"
+								data-bs-toggle="tooltip"
+								title="Место работы"
+							/>
+						</div>
+					</div>
+
+					<div class="carousel-item-content">
+						<img src="${w.img}" class="d-block" alt="..." />
+						<div class="carousel-caption d-none d-md-block">
+							<h5 class="carousel-position">
+								<img
+									src="/img/badge_white_24dp.svg"
+									data-bs-toggle="tooltip"
+									title="Должность"
+								/>
+								${w.position}
+							</h5>
+							<p class="carousel-year">
+								<img
+									src="/img/update_white_24dp.svg"
+									data-bs-toggle="tooltip"
+									title="Стаж работы"
+								/>
+								${w.exp}
+							</p>
+						</div>
+					</div>
+				</div>
+			`);
+
+			$('.carousel-indicators').append(`
+			<button
+			type="button"
+			data-bs-target="#carouselExampleCaptions"
+			data-bs-slide-to="${count++}"
+			${w.isActive ? 'class="active"' : ''}
+			aria-current="true"
+		></button>	
+			`);
+		});
+	};
+
+	// Отрисовка скилов на странице
+	const initSkills = () => {
+		skills.forEach((skill) => {
+			let skillGroupItem = $(`
+				<div class="skills__items">
+					<h3 class="skills-section-name">${skill.sectionName}</h3>
+				</div>
+			`);
+
+			let row = $(`<div class="row row-cols-2 row-cols-lg-5 row-cols-md-4 row-cols-sm-3 g-4"></div>`);
+			for (let index = 0; index < skill.skills.length; index++) {
+				row.append(`
+					<div class="col">
+						<div class="skills-item">
+							<img class="skills-img" src="${skill.skills[index].img}" alt="C#" />
+							<h4 class="skills-name">${skill.skills[index].text}</h4>
+						</div>
+					</div>
+				`);
+			}
+
+			skillGroupItem.append(row);
+			$('#skills').append(skillGroupItem);
+		});
+	};
+
+	// Отрисовка проектов
+	const initProjects = () => {
+		let row = $(`<div class="row row-cols-2 row-cols-lg-3 row-cols-md-3 row-cols-sm-3 g-4"></div>`);
+
+		for (let project of projects) {
+			row.append(`
+				<div class="col">
+					<div class="projects__item">
+						<div class="projects__img-wrapper">
+							<img class="projects-img" src="${project.img}" alt="${project.title}" />
+						</div>
+						<h3>${project.title}</h3>
+						<p class="projects__item-text">					
+							${project.description}
+						</p>
+						<div class="projects__item-btns">
+							<a class="btn-default btn-default--small" href="${project.linkGithub}">Github Repo</a>
+							${
+								project.liveLink != undefined
+									? '<a class="btn-default btn-default--contrast btn-default--small" href="${project.liveLink}">View Live</a>'
+									: ''
+							}			
+						</div>
+					</div>
+				</div>
+				`);
+		}
+
+		$('.projects__items').append(row);
+	};
+
+	const initContacts = () => {
+		$('#myName').text(contacts.name);
+		$('#address').text(contacts.location);
+		$('#phone').text(contacts.phone);
+		$('#email').text(contacts.email);
+	};
+
+	initWorks();
+	initSkills();
+	initProjects();
+	initContacts();
+
 	//инициализируем все всплывающие подсказки (BootStrap)
 	$('[data-bs-toggle="tooltip"]').tooltip({
 		container: 'body',
@@ -77,7 +210,7 @@ $(function () {
 
 	function sendMessage(emailMessage) {
 		axios
-			.post('https://localhost:7239/api/email', emailMessage)
+			.post(`${API_URL}/email`, emailMessage)
 			.then(function (response) {
 				$('.contacts__form').trigger('reset');
 				toastSuccess('Сообщение успешно отправлено!');

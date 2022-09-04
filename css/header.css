@@ -89,14 +89,17 @@
 	bottom: -8px;
 	opacity: 0;
 	transition: opacity linear 200ms;
+	margin-bottom: 5px;
 }
 
 .header-nav__item:hover::after {
 	opacity: 1;
+	margin-bottom: 5px;
 }
 
 .header-nav__item.active::after {
 	opacity: 1;
+	margin-bottom: 5px;
 }
 
 .header-nav__item + .header-nav__item {

@@ -2,32 +2,80 @@ export const API_URL = 'https://localhost:7239/api';
 
 export const skills = [
 	{
-		sectionName: '.Net',
+		sectionName: 'Backend',
 		countInRow: 5,
 		skills: [
 			{
 				img: '/img/c-sharp.png',
-				text: '1',
+				text: 'C#',
 			},
 			{
-				img: '/img/c-sharp.png',
-				text: '2',
+				img: '/img/Net.png',
+				text: '.Net',
 			},
 			{
-				img: '/img/c-sharp.png',
-				text: '3',
+				img: '/img/ASPNetCore.jpg',
+				text: 'ASP.NET Core',
 			},
 			{
-				img: '/img/c-sharp.png',
-				text: '4',
+				img: '/img/EFcore.png',
+				text: 'EF Core',
 			},
 			{
-				img: '/img/c-sharp.png',
-				text: '5',
+				img: '/img/MVC.png',
+				text: 'MVC',
 			},
 			{
-				img: '/img/c-sharp.png',
-				text: '6',
+				img: '/img/linq.png',
+				text: 'LINQ',
+			},
+			{
+				img: '/img/SignalR.png',
+				text: 'Signal R',
+			},
+			{
+				img: '/img/DI.jpg',
+				text: 'DI',
+			},
+			{
+				img: '/img/postgresql.png',
+				text: 'Postgre SQL',
+			},
+			{
+				img: '/img/xUnit.png',
+				text: 'Unit Tests',
+			},
+			{
+				img: '/img/swagger.png',
+				text: 'Swagger',
+			},
+			{
+				img: '/img/oop.png',
+				text: 'OOP',
+			},
+			{
+				img: '/img/automapper.png',
+				text: 'AutoMapper',
+			},
+			{
+				img: '/img/Log4Net.jpg',
+				text: 'Log4Net',
+			},
+			{
+				img: '/img/NewtonsoftJson.png',
+				text: 'Newtonsoft.Json',
+			},
+			{
+				img: '/img/api.png',
+				text: 'API',
+			},
+			{
+				img: '/img/SOLID.png',
+				text: 'SOLID',
+			},
+			{
+				img: '/img/crud.jpg',
+				text: 'CRUD',
 			},
 		],
 	},
@@ -36,32 +84,126 @@ export const skills = [
 		countInRow: 5,
 		skills: [
 			{
-				img: '/img/c-sharp.png',
-				text: '7',
+				img: '/img/HTML5.png',
+				text: 'HTML',
 			},
 			{
-				img: '/img/c-sharp.png',
-				text: '8',
+				img: '/img/CSS.png',
+				text: 'CSS',
 			},
 			{
-				img: '/img/c-sharp.png',
-				text: '9',
+				img: '/img/JS.png',
+				text: 'JavaScript',
 			},
 			{
-				img: '/img/c-sharp.png',
-				text: '10',
+				img: '/img/Bootstrap.png',
+				text: 'Bootstrap',
 			},
 			{
-				img: '/img/c-sharp.png',
-				text: '11',
+				img: '/img/SASS.png',
+				text: 'SASS',
 			},
 			{
-				img: '/img/c-sharp.png',
-				text: '12',
+				img: '/img/jquery.png',
+				text: 'jQuery',
 			},
 			{
-				img: '/img/c-sharp.png',
-				text: '13',
+				img: '/img/json.png',
+				text: 'JSON',
+			},
+			{
+				img: '/img/ajax.png',
+				text: 'AJAX',
+			},
+			{
+				img: '/img/axios.png',
+				text: 'Axios',
+			},
+			{
+				img: '/img/jQueryCookie.jpg',
+				text: 'jQueryCookie',
+			},
+			{
+				img: '/img/SweetAlert2.png',
+				text: 'SweetAlert2',
+			},
+			{
+				img: '/img//AnimateCSS.png',
+				text: 'Animate.css',
+			},
+			{
+				img: '/img/TOOLTIP.png',
+				text: 'POPOVER',
+			},
+			{
+				img: '/img/toastr.png',
+				text: 'toastr',
+			},
+			{
+				img: '/img/AIR_DATEPICKER.png',
+				text: 'AIR DATEPICKER',
+			},
+			{
+				img: '/img/GoogleFonts.png',
+				text: 'GoogleFonts',
+			},
+			{
+				img: '/img/flaticon.png',
+				text: 'flaticon',
+			},
+			{
+				img: '/img/DataTables.png',
+				text: 'DataTables',
+			},
+		],
+	},
+	{
+		sectionName: 'Services',
+		countInRow: 5,
+		skills: [
+			{
+				img: '/img/github.png',
+				text: 'GitHub',
+			},
+			{
+				img: '/img/docker.png',
+				text: 'Docker',
+			},
+			{
+				img: '/img/DBeaver.png',
+				text: 'DBeaver',
+			},
+			{
+				img: '/img/vs.png',
+				text: 'VisualStudio',
+			},
+			{
+				img: '/img/vsc.png',
+				text: 'VisualStudioCode',
+			},
+			{
+				img: '/img/rd.png',
+				text: 'Rider Jetbrains',
+			},
+			{
+				img: '/img/figma.png',
+				text: 'Figma',
+			},
+			{
+				img: '/img/Photoshop.png',
+				text: 'Photoshop',
+			},
+			{
+				img: '/img/win.png',
+				text: 'Windows',
+			},
+			{
+				img: '/img/MacOS.png',
+				text: 'MacOS',
+			},
+			{
+				img: '/img/MSoffice.png',
+				text: 'MS Office',
 			},
 		],
 	},
@@ -70,42 +212,96 @@ export const skills = [
 export const projects = [
 	{
 		img: '/img/logo.svg',
-		title: 'Defective Goods',
+		title: 'Defective Goods v2 beta (MVC)',
 		description:
 			'Учёт некондиционных товаров на складе <br /> (Позволяет вести базу данных товаров с учётом категории, номеров поступлений, мест хранения и фотографий)',
-		liveLink: 'https://hh.ru/resume/69ebd350ff0b302b200039ed1f6a4f456f3249',
-		linkGithub: 'https://github.com/chuvakov',
+		linkGithub: 'https://github.com/chuvakov/DefectiveGoods.v2-MVC',
 	},
 	{
-		img: '/img/logo.svg',
-		title: 'Defective Goods',
+		img: '/img/XOgame-logo.png',
+		title: 'онлайн игра XO-game (front)',
 		description:
-			'Учёт некондиционных товаров на складе <br /> (Позволяет вести базу данных товаров с учётом категории, номеров поступлений, мест хранения и фотографий)',
-		liveLink: 'https://hh.ru/resume/69ebd350ff0b302b200039ed1f6a4f456f3249',
-		linkGithub: 'https://github.com/chuvakov',
+			'Крестики - Нолики, но с онлайн игрой + с чатом и эмоджи + с настройками + с учетными записями + с хранением всего этого в БД',
+		liveLink: 'http://www.xogame.ru/',
+		linkGithub: 'https://github.com/chuvakov/XOgame.frontend',
 	},
 	{
-		img: '/img/logo.svg',
-		title: 'Defective Goods',
+		img: '/img/server.png',
+		title: 'онлайн игра XO-game (back)',
 		description:
-			'Учёт некондиционных товаров на складе <br /> (Позволяет вести базу данных товаров с учётом категории, номеров поступлений, мест хранения и фотографий)',
-		liveLink: 'https://hh.ru/resume/69ebd350ff0b302b200039ed1f6a4f456f3249',
-		linkGithub: 'https://github.com/chuvakov',
+			'Крестики - Нолики. Так же была создана библиотека "emojiPicker" для удобной работы с эмоджи для чата между игроками.',
+		liveLink: 'http://www.server.xogame.ru/swagger',
+		linkGithub: 'https://github.com/chuvakov/Xogame',
 	},
 	{
-		img: '/img/logo.svg',
-		title: 'Defective Goods',
+		img: '/img/IPL.png',
+		title: 'Info-Panel (front)',
 		description:
-			'Учёт некондиционных товаров на складе <br /> (Позволяет вести базу данных товаров с учётом категории, номеров поступлений, мест хранения и фотографий)',
-		liveLink: 'https://hh.ru/resume/69ebd350ff0b302b200039ed1f6a4f456f3249',
-		linkGithub: 'https://github.com/chuvakov',
+			'Приложение ИнфоПанель - одностраничное приложение, содержащее блок погоды, блок актуального курса валют и конвертер валют. Имеется возможность смены темы приложения между темной и светлой темой. Все 3 блока обращаются к сторонним API подтягивая необходимую информацию.',
+		liveLink: 'http://www.info-panel.site/',
+		linkGithub: 'https://github.com/chuvakov/InfoPanel',
 	},
 	{
-		img: '/img/logo.svg',
-		title: 'Defective Goods',
+		img: '/img/server.png',
+		title: 'Info-Panel (back)',
 		description:
-			'Учёт некондиционных товаров на складе <br /> (Позволяет вести базу данных товаров с учётом категории, номеров поступлений, мест хранения и фотографий)',
-		linkGithub: 'https://github.com/chuvakov',
+			'Блок погоды позволяет ввести часть названия населенного пункта и при помощи запроса к API под капотом тянет варианты и их координаты, после выбора варианта по координатам прилетает результат с погодой с другого API. Блок с актуальным кусром валют тянет текущий курс валют для 3х валют, а так же динамику за предыдущий день(стрелочки) Блок конвертации дергает API с курсами выбранных валют и делает расчет согласно заданному числу для конвертации.',
+		liveLink: 'http://www.info-panel.site/',
+		linkGithub: 'https://github.com/chuvakov/InfoPanel.server',
+	},
+	{
+		img: '/img/resume.png',
+		title: 'Портфолио (front)',
+		description: 'моя личная страничка - портфолио, на которой вы сейчас находитесь',
+		liveLink: 'http://www.alex-chuvakov.ru/',
+		linkGithub: 'https://github.com/chuvakov/Portfolio.site',
+	},
+	{
+		img: '/img/server.png',
+		title: 'Портфолио (back)',
+		description: 'реализация БЭКА для обработки отправки сообщений по email',
+		liveLink: 'http://www.alex-chuvakov.ru/',
+		linkGithub: 'https://github.com/chuvakov/Portfolio.server',
+	},
+	{
+		img: '/img/Questionnaire.png',
+		title: 'Опросник (MVC)',
+		description:
+			'Данное приложение представляет из себя приложение опросник написанный на Asp.Net Core Mvc с возможность составления, прохождения опросника, а так же загрузки и выгрузки готового опросника.',
+		linkGithub: 'https://github.com/chuvakov/QuestionnaryWebApp-MVC',
+	},
+	{
+		img: '/img/ToDo-logo.png',
+		title: 'ToDo List (front)',
+		description:
+			'Классический ToDoList - с двумя вариантами реализации, только на JS, HTML, CSS и вариант с серверной частью на C# + БД для хранения данных.',
+		linkGithub: 'https://github.com/chuvakov/ToDoList-backAndFront',
+	},
+	{
+		img: '/img/server.png',
+		title: 'ToDo List (back)',
+		description: 'ToDoList реализация БЭКА для версии приложения, когда опросник хранится в БД',
+		linkGithub: 'https://github.com/chuvakov/ToDoList.server',
+	},
+	{
+		img: '/img/calc.png',
+		title: 'Калькулятор в стиле Iphone (winforms)',
+		description:
+			'Калькулятор на WinForms "CalculatorLikeIphone" - с стилем APPLE like (что бы добиться такого стиля кнопок была использована доп. библеотека)',
+		linkGithub: 'https://github.com/chuvakov/CalculatorLikeIphone',
+	},
+	{
+		img: '/img/snake.png',
+		title: 'Игра змейка (консольная)',
+		description: 'Консольная, но при этом полноценная, игра Змейка - ООП в полном виде',
+		linkGithub: 'https://github.com/chuvakov/SnakeGame',
+	},
+	{
+		img: '/img/DGv1.png',
+		title: 'Defective Goods v1 alfa (winforms)',
+		description:
+			'Ранняя версия вспомогательного приложения для склада по обработке бракованных товаров, еще на winforms',
+		linkGithub: 'https://github.com/chuvakov/DefectiveGoods.v1-winforms',
 	},
 ];
 

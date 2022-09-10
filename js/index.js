@@ -72,7 +72,7 @@ $(function () {
 				</div>
 			`);
 
-			let row = $(`<div class="row row-cols-2 row-cols-lg-5 row-cols-md-4 row-cols-sm-3 g-4"></div>`);
+			let row = $(`<div class="row row-cols-2 row-cols-lg-5 row-cols-md-3 row-cols-sm-2 g-4"></div>`);
 			for (let index = 0; index < skill.skills.length; index++) {
 				row.append(`
 					<div class="col">
@@ -91,7 +91,7 @@ $(function () {
 
 	// Отрисовка проектов
 	const initProjects = () => {
-		let row = $(`<div class="row row-cols-2 row-cols-lg-3 row-cols-md-3 row-cols-sm-3 g-4"></div>`);
+		let row = $(`<div class="row row-cols-1 row-cols-lg-3 row-cols-md-2 row-cols-sm-1 g-4"></div>`);
 
 		for (let project of projects) {
 			row.append(`
@@ -108,7 +108,7 @@ $(function () {
 							<a class="btn-default btn-default--small" href="${project.linkGithub}">Github Repo</a>
 							${
 								project.liveLink != undefined
-									? '<a class="btn-default btn-default--contrast btn-default--small" href="${project.liveLink}">View Live</a>'
+									? `<a class="btn-default btn-default--contrast btn-default--small" target="_blank" href="${project.liveLink}">View Live</a>`
 									: ''
 							}			
 						</div>

@@ -123,4 +123,8 @@
 	.header-nav__item + .header-nav__item {
 		margin-left: 0;
 	}
+
+	.header-nav__item {
+		margin-top: 15px;
+	}
 }

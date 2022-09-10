@@ -136,3 +136,26 @@
 		font-size: 20px;
 	}
 }
+
+@media screen and (max-width: 768px) {
+	.about__content {
+		flex-direction: column-reverse;
+		align-items: center;
+		justify-content: center;
+	}
+
+	.about__info {
+		margin-bottom: 80px;
+		margin-left: 0;
+	}
+}
+
+@media screen and (max-width: 576px) {
+	.about__title {
+		font-size: 40px;
+	}
+
+	.about__info-title {
+		font-size: 30px;
+	}
+}

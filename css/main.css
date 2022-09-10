@@ -69,3 +69,36 @@
 		max-height: 400px;
 	}
 }
+
+@media screen and (max-width: 768px) {
+	.main__content {
+		flex-direction: column-reverse;
+		align-items: center;
+		justify-content: center;
+	}
+
+	.main__card {
+		width: 400px;
+		margin-bottom: 30px;
+	}
+}
+
+@media screen and (max-width: 576px) {
+	.main__title {
+		font-size: 44px;
+	}
+
+	.main__subtitle {
+		font-size: 25px;
+	}
+
+	.main__card {
+		width: 250px;
+		height: 250px;
+	}
+
+	.main__img {
+		max-width: 225px;
+		max-height: 225px;
+	}
+}

@@ -66,3 +66,9 @@
 	display: flex;
 	justify-content: space-between;
 }
+
+@media screen and (max-width: 576px) {
+	.projects__title {
+		font-size: 40px;
+	}
+}

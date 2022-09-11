@@ -77,6 +77,10 @@ export const skills = [
 				img: '/img/crud.jpg',
 				text: 'CRUD',
 			},
+			{
+				img: '/img/JWTтокены.png',
+				text: 'JWT токены',
+			},
 		],
 	},
 	{
@@ -144,16 +148,16 @@ export const skills = [
 				text: 'AIR DATEPICKER',
 			},
 			{
-				img: '/img/GoogleFonts.png',
-				text: 'GoogleFonts',
-			},
-			{
-				img: '/img/flaticon.png',
-				text: 'flaticon',
-			},
-			{
 				img: '/img/DataTables.png',
 				text: 'DataTables',
+			},
+			{
+				img: '/img/BEM.png',
+				text: 'BEM нотация',
+			},
+			{
+				img: '/img/AdminLTE.png',
+				text: 'AdminLTE',
 			},
 		],
 	},
@@ -204,6 +208,14 @@ export const skills = [
 			{
 				img: '/img/MSoffice.png',
 				text: 'MS Office',
+			},
+			{
+				img: '/img/GoogleFonts.png',
+				text: 'GoogleFonts',
+			},
+			{
+				img: '/img/flaticon.png',
+				text: 'flaticon',
 			},
 		],
 	},

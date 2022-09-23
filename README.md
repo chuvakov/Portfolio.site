@@ -1,3 +1,3 @@
 # Portfolio.site
-Мое портфолио (только Front)
+Мое портфолио (frontend)
 http://www.alex-chuvakov.ru/
